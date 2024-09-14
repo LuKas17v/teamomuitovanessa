@@ -1,0 +1,86 @@
+/* Estilos gerais da página */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+/* Fundo com imagem */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.hdwallpapers.in/download/couple_romantic_sunset_5k-5120x2880.jpg') no-repeat center center fixed; /* Imagem de fundo */
+    background-size: cover;
+    filter: brightness(70%); /* Escurece a imagem para melhorar a legibilidade do texto */
+}
+
+/* Contêiner para centralizar o texto */
+.container {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6); /* Fundo escuro semi-transparente */
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px); /* Desfoque de fundo */
+    animation: fadeIn 2s ease-out; /* Animação de entrada */
+}
+
+/* Estilo da mensagem */
+.message {
+    text-align: center;
+    animation: slideIn 2s ease-out;
+}
+
+.message h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffd700; /* Cor dourada para destaque */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Sombra do texto */
+    animation: glow 1.5s ease-in-out infinite; /* Efeito de brilho */
+}
+
+.message p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #f5f5f5; /* Cor clara para contraste */
+}
+
+/* Animação de brilho do texto */
+@keyframes glow {
+    0% { text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffd700; }
+    50% { text-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffd700, 0 0 50px #ffd700; }
+    100% { text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffd700; }
+}
+
+/* Animação de entrada do contêiner */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação de deslizamento da mensagem */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
